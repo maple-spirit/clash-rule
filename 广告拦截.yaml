@@ -1,13 +1,14 @@
 payload:
-  - DOMAIN,safebrowsing.urlsec.qq.com
-  - DOMAIN,safebrowsing.googleapis.com
-  - DOMAIN-SUFFIX,mzstatic.com
-  - DOMAIN-SUFFIX,itunes.apple.com
-  - DOMAIN-SUFFIX,icloud.com
-  - DOMAIN-SUFFIX,icloud-content.com
-  - DOMAIN-SUFFIX,me.com
-  - DOMAIN-SUFFIX,aaplimg.com
-  - DOMAIN-SUFFIX,cdn20.com
-  - DOMAIN-SUFFIX,cdn-apple.com
-  - DOMAIN-SUFFIX,akadns.net
-  - DOMAIN-SUFFIX,akamaiedge.net
+  - '+.0-000.store'
+  - '+.0.code.cotsta.ru'
+  - '+.0.nextyourcontent.com'
+  - '+.0001.best'
+  - '+.001adafg.xyz'
+  - '+.0024aaaa.com'
+  - '+.003store.com'
+  - '+.004fsdljasd.xyz'
+  - '+.005.0x1f4b0.com'
+  - '+.006.freecounters.co.uk'
+  - '+.008844.cc'
+  - '+.00aaa2d81c1d174.com'
+  - '+.00bloggers.ru'
