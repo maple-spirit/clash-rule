@@ -130,4 +130,6 @@
  - DOMAIN-SUFFIX,emby.xeton.dev,🎬 EMBY
  - DOMAIN-SUFFIX,emby.cjpc.cc,🎬 EMBY
  - DOMAIN-SUFFIX,cristiamo.xyz,🎬 EMBY
+ - DOMAIN-SUFFIX,emby.cristiamo.top,🎬 EMBY
  - IP-CIDR,161.97.148.156/24,🎬 EMBY,no-resolve
+ 
