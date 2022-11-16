@@ -139,3 +139,11 @@
  - DOMAIN-SUFFIX,thehulubraintrust.com,🍍 Hulu
  - DOMAIN-SUFFIX,wwwhuluplus.com,🍍 Hulu
  - PROCESS-NAME,com.hulu.plus,🍍 Hulu
+ - DOMAIN,bahamut.akamaized.net,📺 巴哈姆特
+ - DOMAIN-SUFFIX,bahamut.com.tw,📺 巴哈姆特
+ - DOMAIN-SUFFIX,digicert.com,📺 巴哈姆特
+ - DOMAIN-SUFFIX,fbcdn.net,📺 巴哈姆特
+ - DOMAIN-SUFFIX,gamer.com.tw,📺 巴哈姆特
+ - DOMAIN-SUFFIX,gvt1.com,📺 巴哈姆特
+ - DOMAIN-SUFFIX,hinet.net,📺 巴哈姆特
+ - DOMAIN-SUFFIX,viblast.com,📺 巴哈姆特
