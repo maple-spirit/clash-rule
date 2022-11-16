@@ -11,8 +11,3 @@ payload:
   - DOMAIN-SUFFIX,cdn-apple.com
   - DOMAIN-SUFFIX,akadns.net
   - DOMAIN-SUFFIX,akamaiedge.net
-  - DOMAIN-SUFFIX,edgekey.net
-  - DOMAIN-SUFFIX,mwcloudcdn.com
-  - DOMAIN-SUFFIX,mwcname.com
-  - DOMAIN-SUFFIX,apple.com
-  - DOMAIN-SUFFIX,apple-cloudkit.com
