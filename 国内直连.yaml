@@ -921,16 +921,37 @@ payload:
   - IP-CIDR6,2a0b:b581::/48
   - IP-CIDR6,2a0b:b582::/48
   - IP-CIDR6,2a0b:b583::/48
+  - PROCESS-NAME,Weiyun
+  - PROCESS-NAME,baidunetdisk
+  - PROCESS-NAME,v2ray
+  - PROCESS-NAME,xray
+  - PROCESS-NAME,naive.exe
+  - PROCESS-NAME,trojan.exe
+  - PROCESS-NAME,trojan-go.exe
+  - PROCESS-NAME,sslocal.exe
+  - PROCESS-NAME,ss-local.exe
+  - PROCESS-NAME,privoxy.exe
+  - PROCESS-NAME,leaf.exe
+  - PROCESS-NAME,Surge
+  - PROCESS-NAME,Surge%202
+  - PROCESS-NAME,Surge%203
+  - PROCESS-NAME,Surge%204
+  - PROCESS-NAME,Thunder
+  - PROCESS-NAME,DownloadService
+  - PROCESS-NAME,qBittorrent
+  - PROCESS-NAME,Transmission
+  - PROCESS-NAME,aria2c
+  - PROCESS-NAME,Folx
+  - PROCESS-NAME,NetTransport
+  - PROCESS-NAME,uTorrent
+  - PROCESS-NAME,WebTorrent
   - PROCESS-NAME,aria2c.exe
+  - PROCESS-NAME,BitComet.exe
   - PROCESS-NAME,fdm.exe
-  - PROCESS-NAME,Folx.exe
   - PROCESS-NAME,NetTransport.exe
-  - PROCESS-NAME,Thunder.exe
-  - PROCESS-NAME,Transmission.exe
+  - PROCESS-NAME,qbittorrent.exe
+  - PROCESS-NAME,ThunderVIP.exe
+  - PROCESS-NAME,transmission-daemon.exe
+  - PROCESS-NAME,transmission-qt.exe
   - PROCESS-NAME,uTorrent.exe
   - PROCESS-NAME,WebTorrent.exe
-  - PROCESS-NAME,WebTorrent Helper.exe
-  - PROCESS-NAME,qbittorrent.exe
-  - PROCESS-NAME,DownloadService.exe
-  - PROCESS-NAME,Weiyun.exe
-  - PROCESS-NAME,baidunetdisk.exe
