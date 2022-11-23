@@ -60998,5 +60998,3 @@ payload:
  - '+.callelundotre.xyz'
  - '+.camisagrieko.com'
  - '+.capultytrese.xyz'
- - '+.carextenuous.com'
- - '+.carriedmycosis.com'
