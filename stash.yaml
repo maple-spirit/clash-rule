@@ -1,0 +1,320 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - name: rn3v2
+
+  - name: pk2
+
+proxy-providers:
+  全部节点:
+    type: http
+    url: 
+    path: ./我的DIY配置.yml
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 300
+      url: https://www.gstatic.com/generate_204
+  香港节点:
+    type: http
+    url: 
+    path: ./我的DIY配置.yml
+    interval: 3600    
+    filter: 香港|港|Hong Kong|HK|hk
+    health-check:
+      enable: true
+      interval: 300
+      url: https://www.gstatic.com/generate_204
+  新加坡节点:
+    type: http
+    url: 
+    path: ./我的DIY配置.yml
+    interval: 3600  
+    filter: 新加坡|sg|SG|狮城|坡|Singgapore
+    health-check:
+      enable: true
+      interval: 300
+      url: https://www.gstatic.com/generate_204
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 香港节点
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: ♻️ Relay
+    type: relay
+    proxies:
+      - ♻️ 负载均衡
+      - pk2
+  - name: 🚀 手动切换
+    type: select
+    proxies:
+      - 香港节点
+      - 新加坡节点
+      - DIRECT
+      - rn3v2
+      - pk2
+  - name: ♻️ 自动选择
+    type: url-test
+    use:
+      - 全部节点
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: ♻️ 负载均衡
+    type: load-balance
+    use:
+      - 香港节点
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    strategy: round-robin
+  - name: 香港节点
+    type: url-test
+    use:
+      - 香港节点
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 新加坡节点
+    type: select
+    use:
+      - 新加坡节点
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 香港节点
+      - ♻️ Relay
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+  - name: 🎥 奈飞视频
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 新加坡节点
+      - rn3v2
+      - 🚀 手动切换
+  - name: 🎥 DisneyPlus
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 新加坡节点
+      - 🚀 手动切换
+  - name: 📹 其它国外媒体
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 香港节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🎬 EMBY
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 香港节点
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🌍 国外流量
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - 香港节点
+  - name: 📢 谷歌细分
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 香港节点
+  - name: 🎵 TikTok
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 🚀 节点选择
+      - 🚀 手动切换
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 🚀 节点选择
+      - 🚀 手动切换
+      - 🎯 国内直连
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - ♻️ Relay
+      - 🚀 节点选择
+      - 🚀 手动切换
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - ♻️ Relay
+      - DIRECT
+      - 🚀 节点选择
+      - 🚀 手动切换
+  - name: 🎯 国内直连
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🆎 AdBlock
+    type: select
+    proxies:
+      - REJECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - ♻️ Relay
+      - 香港节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - DIRECT
+rule-providers:
+  AdBlockip:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%86%8E%20AdBlockip.txt
+    path: ./ruleset/AdBlockip.yaml
+    interval: 86400
+  AdBlock:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%86%8E%20AdBlock.txt
+    path: ./ruleset/AdBlock.yaml     
+    interval: 86400
+  国内直连ip:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9Eip.txt
+    path: ./ruleset/国内直连ip.yaml
+    interval: 86400
+  国内直连:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9E.txt
+    path: ./ruleset/国内直连.yaml
+    interval: 86400
+  苹果服务:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%8D%8E%20%E8%8B%B9%E6%9E%9C%E6%9C%8D%E5%8A%A1.txt
+    path: ./ruleset/苹果服务.yaml
+    interval: 86400
+  微软服务:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%E2%93%82%EF%B8%8F%20%E5%BE%AE%E8%BD%AF%E6%9C%8D%E5%8A%A1.txt
+    path: ./ruleset/微软服务.yaml
+    interval: 86400
+  谷歌细分:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%93%A2%20%E8%B0%B7%E6%AD%8C%E7%BB%86%E5%88%86.yaml
+    path: ./ruleset/谷歌细分.yaml
+    interval: 86400
+  bilibili:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%93%BA%20Bilibili.yaml
+    path: ./ruleset/bilibili.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%93%B9%20YouTube.txt
+    path: ./ruleset/youtube.yaml
+    interval: 86400
+  tiktok:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%8E%B5%20TikTok.txt
+    path: ./ruleset/tiktok.yaml
+    interval: 86400
+  netflix:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%8E%A5%20Netflix.yaml
+    path: ./ruleset/netflix.yaml
+    interval: 86400
+  disneyplus:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%8E%A5%20DisneyPlus.txt
+    path: ./ruleset/disneyplus.yaml
+    interval: 86400
+  emby:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%8E%AC%20EMBY.txt
+    path: ./ruleset/emby.yaml
+    interval: 86400
+  其它国外媒体:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%93%80%20%E5%85%B6%E5%AE%83%E5%9B%BD%E5%A4%96%E5%AA%92%E4%BD%93.txt
+    path: ./ruleset/其它国外媒体.yaml
+    interval: 86400
+  telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%93%B2%20Telegram.yaml
+    path: ./ruleset/telegram.yaml
+    interval: 86400
+  游戏平台:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%8E%AE%20%E6%B8%B8%E6%88%8F%E5%B9%B3%E5%8F%B0.yaml
+    path: ./ruleset/游戏平台.yaml
+    interval: 86400
+  国外流量ip:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%9A%80%20%E5%9B%BD%E5%A4%96%E6%B5%81%E9%87%8Fip.txt
+    path: ./ruleset/国外流量ip.yaml
+    interval: 86400    
+  国外流量:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%9A%80%20%E5%9B%BD%E5%A4%96%E6%B5%81%E9%87%8F.txt
+    path: ./ruleset/国外流量.yaml
+    interval: 86400
+rules:
+  - RULE-SET,AdBlockip,🆎 AdBlock
+  - RULE-SET,AdBlock,🆎 AdBlock
+  - RULE-SET,bilibili,📺 哔哩哔哩
+  - RULE-SET,苹果服务,🍎 苹果服务
+  - RULE-SET,国内直连ip,🎯 国内直连
+  - RULE-SET,国内直连,🎯 国内直连
+  - RULE-SET,微软服务,Ⓜ️ 微软服务
+  - RULE-SET,youtube,📹 油管视频
+  - RULE-SET,tiktok,🎵 TikTok
+  - RULE-SET,netflix,🎥 奈飞视频
+  - RULE-SET,disneyplus,🎥 DisneyPlus
+  - RULE-SET,emby,🎬 EMBY
+  - RULE-SET,其它国外媒体,📹 其它国外媒体
+  - RULE-SET,谷歌细分,📢 谷歌细分
+  - RULE-SET,telegram,📲 电报消息
+  - RULE-SET,游戏平台,🎮 游戏平台
+  - RULE-SET,国外流量ip,🌍 国外流量  
+  - RULE-SET,国外流量,🌍 国外流量
+  - GEOIP,CN,🎯 国内直连
+  - MATCH,🐟 漏网之鱼
