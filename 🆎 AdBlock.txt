@@ -59686,4 +59686,3 @@ payload:
  - '+.zzyytt.top'
  - '+.zzzhuoxiaqu.online'
  - '+.zzznews.ru'
- - 'adsmind.apdcdn.tc.qq.com'
