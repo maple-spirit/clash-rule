@@ -45,3 +45,6 @@ rules:
   - RULE-SET,Lan,DIRECT
   - GEOIP,CN,国内网站
   - MATCH,漏网之鱼
+
+
+test test
