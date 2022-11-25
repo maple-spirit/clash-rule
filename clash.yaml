@@ -185,17 +185,11 @@ proxy-groups:
       - 🚀 手动切换
       - DIRECT
 rule-providers:
-  AdBlockip:
-    type: http
-    behavior: ipcidr
-    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%86%8E%20AdBlockip.txt
-    path: ./ruleset/AdBlockip.yaml
-    interval: 86400
-  AdBlock2:
+  AdBlock:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%86%8E%20AdBlock2.txt
-    path: ./ruleset/AdBlock2.yaml     
+    url: https://anti-ad.net/clash.yaml
+    path: ./ruleset/AdBlock.yaml     
     interval: 86400
   国内直连ip:
     type: http
@@ -288,8 +282,7 @@ rule-providers:
     path: ./ruleset/国外流量.yaml
     interval: 86400
 rules:
-  - RULE-SET,AdBlockip,🆎 AdBlock
-  - RULE-SET,AdBlock2,🆎 AdBlock
+  - RULE-SET,AdBlock,🆎 AdBlock
   - RULE-SET,bilibili,📺 哔哩哔哩
   - RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,国内直连ip,🎯 国内直连
