@@ -191,23 +191,17 @@ rule-providers:
     url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%86%8E%20AdBlockip.txt
     path: ./ruleset/AdBlockip.yaml
     interval: 86400
-  AdBlock:
+  AdBlock2:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%86%8E%20AdBlock.txt
-    path: ./ruleset/AdBlock.yaml     
+    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%F0%9F%86%8E%20AdBlock2.txt
+    path: ./ruleset/AdBlock2.yaml     
     interval: 86400
   国内直连ip:
     type: http
     behavior: ipcidr
     url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9Eip.txt
     path: ./ruleset/国内直连ip.yaml
-    interval: 86400
-  国内直连:
-    type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/maple-spirit/clash-rule/main/%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9E.txt
-    path: ./ruleset/国内直连.yaml
     interval: 86400
   苹果服务:
     type: http
@@ -295,11 +289,10 @@ rule-providers:
     interval: 86400
 rules:
   - RULE-SET,AdBlockip,🆎 AdBlock
-  - RULE-SET,AdBlock,🆎 AdBlock
+  - RULE-SET,AdBlock2,🆎 AdBlock
   - RULE-SET,bilibili,📺 哔哩哔哩
   - RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,国内直连ip,🎯 国内直连
-  - RULE-SET,国内直连,🎯 国内直连
   - RULE-SET,微软服务,Ⓜ️ 微软服务
   - RULE-SET,youtube,📹 油管视频
   - RULE-SET,tiktok,🎵 TikTok
