@@ -1,5 +1,5 @@
-#增加直连域名
 payload:
+#增加直连域名
   - '+.blueseamusics'
   - '+.bitwarden'
   - 'apm-misaka.biliapi.net'
