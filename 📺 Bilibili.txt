@@ -1,5 +1,6 @@
 #增加直连域名
 payload:
+  - 'clash.razord.top'
   - '+.blueseamusics'
   - '+.bitwarden'
   - 'apm-misaka.biliapi.net'
