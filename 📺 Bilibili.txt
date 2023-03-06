@@ -1,5 +1,5 @@
-payload:
 #增加直连域名
+payload:
   - 'apm-misaka.biliapi.net'
   - 'p-bstarstatic.akamaized.net'
   - 'p.bstarstatic.com'
