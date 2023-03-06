@@ -1,7 +1,8 @@
 payload:
 #增加其它直连域名
-  - '+.blueseamusics'
-  - '+.bitwarden'
+  - '+.blueseamusics.com'
+  - '+.bitwarden.com'
+  - '+.bitwarden.net'
   - 'clash.razord.top'
 #bilibili直连
   - 'apm-misaka.biliapi.net'
