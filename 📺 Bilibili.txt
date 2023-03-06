@@ -1,5 +1,7 @@
 #增加直连域名
 payload:
+  - '+.blueseamusics'
+  - '+.bitwarden'
   - 'apm-misaka.biliapi.net'
   - 'p-bstarstatic.akamaized.net'
   - 'p.bstarstatic.com'
