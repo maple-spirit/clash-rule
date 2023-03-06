@@ -1,8 +1,9 @@
-#增加直连域名
 payload:
-  - 'clash.razord.top'
+#增加其它直连域名
   - '+.blueseamusics'
   - '+.bitwarden'
+  - 'clash.razord.top'
+#bilibili直连
   - 'apm-misaka.biliapi.net'
   - 'p-bstarstatic.akamaized.net'
   - 'p.bstarstatic.com'
