@@ -1,6 +1,7 @@
 payload:
   - '+.ju.dog'
   - '+.emby.wtf'
+  - '+.emby.media'
   - '+.embytv.cf'    
   - '+.jmsooo.com'
   - '+.odysseyplus'
