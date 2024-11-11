@@ -37,3 +37,4 @@ payload:
   - '+.cristiamo.xyz'
   - '+.cristiamo.top'
   - '+.4545.cf'
+  - '+.jmsuper.com'
