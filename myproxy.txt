@@ -1,0 +1,3 @@
+payload:
+  - '+.bing.com'
+  - '+.bing.com'

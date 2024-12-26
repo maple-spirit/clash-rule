@@ -38,3 +38,5 @@ payload:
   - '+.cristiamo.top'
   - '+.4545.cf'
   - '+.jmsuper.com'
+  - '+.crond.dev'
+  - '+.nomaba.top'
