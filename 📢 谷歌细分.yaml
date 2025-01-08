@@ -7,10 +7,8 @@ payload:
   - DOMAIN-SUFFIX,g.co
   - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,goo.gl
-  - DOMAIN-SUFFIX,googleapis.cn
-  - DOMAIN-SUFFIX,googleapis.com
-  - DOMAIN-SUFFIX,gstatic.cn
-  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-KEYWORD,googleapis
+  - DOMAIN-KEYWORD,gstatic
   - DOMAIN-SUFFIX,gvt0.com
   - DOMAIN-SUFFIX,gvt1.com
   - DOMAIN-SUFFIX,gvt2.com
