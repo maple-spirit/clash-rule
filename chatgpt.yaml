@@ -4,6 +4,7 @@ payload:
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,openai.com
 
+
   # > Chat GPT API & CDN
   - DOMAIN-SUFFIX,cdn.oaistatic.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
@@ -45,3 +46,8 @@ payload:
 
   # > Perplexity AI
   - DOMAIN-SUFFIX,perplexity.ai
+  # > Others
+  -DOMAIN-KEYWORD,openai
+  - IP-CIDR,24.199.123.28/32,no-resolve
+  - IP-CIDR,64.23.132.171/32,no-resolve
+  - IP-ASN,20473,no-resolve
