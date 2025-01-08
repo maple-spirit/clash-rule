@@ -1,4 +1,5 @@
 payload:
+  - '+.emby.pro'
   - '+.bgp.yt'
   - '+.ju.dog'
   - '+.emby.wtf'
