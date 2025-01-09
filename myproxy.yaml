@@ -1,3 +1,4 @@
 payload:
-  - '+.linux.do'
+  - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-KEYWORD,linux
 
